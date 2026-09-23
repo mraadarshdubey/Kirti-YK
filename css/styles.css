@@ -1877,53 +1877,141 @@ ul, ol {
 
 .offer-compact-pricing-box {
   background: #FFFFFF;
-  border-radius: var(--radius-lg);
-  padding: 20px 24px;
+  border-radius: var(--radius-xl);
+  padding: 22px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid var(--rose-card-border);
-  box-shadow: var(--shadow-sm);
+  gap: 20px;
+  border: 1.5px solid var(--rose-card-border);
+  border-left: 5px solid var(--rose-primary);
+  box-shadow: 0 10px 30px rgba(216, 63, 120, 0.08);
+  transition: all var(--transition-smooth);
+}
+
+.offer-compact-pricing-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(216, 63, 120, 0.12);
 }
 
 .compact-price-header {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+}
+
+.compact-p-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.compact-p-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--rose-deep);
+  background: var(--rose-soft);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.compact-p-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--plum-dark);
+  background: var(--bg-warm);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
 }
 
 .compact-p-title {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.22rem;
   font-weight: 700;
   color: var(--plum-dark);
+  line-height: 1.25;
 }
 
 .compact-p-sub {
-  font-size: 0.78rem;
-  color: var(--rose-deep);
-  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--color-body);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.compact-p-amount-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  padding-left: 20px;
+  border-left: 1px solid var(--color-border);
 }
 
 .compact-p-amount {
   font-family: var(--font-heading);
-  font-size: 1.85rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--rose-deep);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.compact-p-amount-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+  white-space: nowrap;
 }
 
 .offer-whats-included {
   background: #FFFFFF;
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 26px 28px;
+  border: 1.5px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+}
+
+.included-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.included-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--rose-soft);
+  color: var(--rose-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 .included-title {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--plum-dark);
 }
@@ -1937,15 +2025,16 @@ ul, ol {
 .included-list li {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   font-size: 0.88rem;
+  line-height: 1.55;
   color: var(--color-body);
 }
 
 .included-list li i {
   color: var(--rose-primary);
-  font-size: 1.05rem;
-  margin-top: 3px;
+  font-size: 1.15rem;
+  margin-top: 2px;
   flex-shrink: 0;
 }
 
@@ -1953,22 +2042,23 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 18px;
-  background: rgba(255, 255, 255, 0.6);
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.85);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--rose-card-border);
+  box-shadow: 0 2px 8px rgba(216, 63, 120, 0.04);
 }
 
 .scarcity-icon {
   color: var(--rose-primary);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   flex-shrink: 0;
 }
 
 .scarcity-text {
   font-size: 0.84rem;
-  color: var(--plum-soft);
-  line-height: 1.45;
+  color: var(--plum-dark);
+  line-height: 1.5;
 }
 
 /* Booking Card & Inline Form */
@@ -1976,17 +2066,39 @@ ul, ol {
   background: #FFFFFF;
   border-radius: var(--radius-xl);
   padding: clamp(24px, 4vw, 36px);
-  box-shadow: var(--shadow-card);
-  border: 2px solid var(--rose-soft);
+  box-shadow: 0 16px 40px rgba(51, 28, 39, 0.09);
+  border: 1.5px solid var(--rose-card-border);
+}
+
+.form-card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--rose-deep);
+  background: var(--rose-soft);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 10px;
 }
 
 .form-title {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--plum-dark);
-  margin-bottom: var(--space-md);
-  text-align: center;
+  margin-bottom: 4px;
+}
+
+.form-card-sub {
+  font-size: 0.82rem;
+  color: var(--color-body);
 }
 
 .inline-booking-form {
@@ -3112,6 +3224,33 @@ ul, ol {
   .btn-ig-pill {
     width: 100%;
     justify-content: center;
+  }
+
+  /* Section 09 Offer Mobile */
+  .offer-compact-pricing-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+
+  .compact-p-amount-box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 12px;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .offer-whats-included {
+    padding: 20px 18px;
+  }
+
+  .booking-form-card {
+    padding: 24px 18px;
   }
 
   /* Final CTA Mobile */
